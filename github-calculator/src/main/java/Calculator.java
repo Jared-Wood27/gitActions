@@ -65,7 +65,7 @@ class Calculator {
     if int a = 10 then this method returns: 1010
     if int a = 16 then this method returns: 10000
      */
-    String intToBinaryNumber(int number){
+    String intToBinaryNumber(int n){
         if (n < 0) {
             System.out.println("Invalid input. Please enter a non-negative integer.");
             return ""; // Empty string to indicate invalid input
