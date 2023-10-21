@@ -38,7 +38,9 @@ jobs:
           mvn -ntp test -Dtest='CalculatorTestThorough'
 
       - name: Package
-        run: mvn -ntp package
+        run: |
+          cd github-calculator
+          mvn -ntp package
 
 
       - name: Log in to Docker Hub
