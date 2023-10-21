@@ -7,7 +7,7 @@ public class Main {
     Calculator calculator = new Calculator();
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Enter a command (add/subtract/multiply/divide/fibonacci/intToBinary):");
+    System.out.println("Enter a command (add/subtract/multiply/divide/fibonacci/intToBinary/done):");
     String command = scanner.next();
 
     while(command != "done") {
@@ -49,6 +49,7 @@ public class Main {
         default:
           System.out.println("Invalid command.");
       }
+      command = scanner.next();
     }
 
     scanner.close();
