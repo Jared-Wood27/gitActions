@@ -44,7 +44,7 @@ class Calculator {
             System.out.println("Invalid input. Please enter a positive integer.");
             return -1; // Error code to indicate invalid input
         } else if (n == 1) {
-            return 0;
+            return 1;
         } else if (n == 2) {
             return 1;
         } else {
