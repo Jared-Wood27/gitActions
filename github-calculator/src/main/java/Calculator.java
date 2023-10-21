@@ -38,7 +38,23 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        return 0;
+        if (n <= 0) {
+            System.out.println("Invalid input. Please enter a positive integer.");
+            return -1; // Error code to indicate invalid input
+        } else if (n == 1) {
+            return 0;
+        } else if (n == 2) {
+            return 1;
+        } else {
+            int prev = 0;
+            int current = 1;
+            for (int i = 3; i <= n; i++) {
+                int next = prev + current;
+                prev = current;
+                current = next;
+            }
+            return current;
+        }
     }
 
 
@@ -50,7 +66,20 @@ class Calculator {
     if int a = 16 then this method returns: 10000
      */
     String intToBinaryNumber(int number){
-        return null;
+        if (n < 0) {
+            System.out.println("Invalid input. Please enter a non-negative integer.");
+            return ""; // Empty string to indicate invalid input
+        } else if (n == 0) {
+            return "0";
+        } else {
+            StringBuilder binaryString = new StringBuilder();
+            while (n > 0) {
+                int remainder = n % 2;
+                binaryString.insert(0, remainder); // Insert at the beginning of the string
+                n = n / 2;
+            }
+            return binaryString.toString();
+        }
     }
 
     /*
@@ -62,7 +91,12 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
-        return null;
+        // Generate a random suffix using a secure random number generator
+        String randomSuffix = new BigInteger(130, random).toString(32);
+
+        // Create the unique ID by combining the original string and the random suffix
+        String uniqueID = n + randomSuffix;
+        return uniqueID;
     }
 
 
