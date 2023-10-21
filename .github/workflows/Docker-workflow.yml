@@ -19,6 +19,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           architecture: x64
+      - name: Print current directory
+          run: pwd
+          working-directory: ./github-calculator
+
       - name: Clean
         run: |
           cd github-calculator
