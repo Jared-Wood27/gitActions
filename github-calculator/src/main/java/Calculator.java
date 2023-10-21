@@ -1,3 +1,5 @@
+import java.security.SecureRandom;
+import java.math.BigInteger;
 
 class Calculator {
 
@@ -87,9 +89,11 @@ class Calculator {
     Each createdID must contain the string n in its unaltered Form
     if String n = "Jason"
     then the created ID could be = Jasonklfgn3jknnvksdfm - Because it contains the unaltered String n and is unique
-
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
+
+    private static final SecureRandom random = new SecureRandom();
+
     String createUniqueID(String n){
         // Generate a random suffix using a secure random number generator
         String randomSuffix = new BigInteger(130, random).toString(32);
